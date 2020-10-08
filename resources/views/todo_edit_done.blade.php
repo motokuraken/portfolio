@@ -8,7 +8,7 @@
 	<div class="row">
         <div class="mx-auto">
 			<div class="col-md-12 col-ms-12 col-xs-12 text-center">
-                <h2>Todoの編集が完了しました。</h2>
+                <h2>Todoの更新が完了しました。</h2>
             </div>
             <div class="col-md-12 col-ms-12 col-xs-12 text-center">
                 <hr class="my-5">

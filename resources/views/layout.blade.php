@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{asset("style.css")}}">
+    <link rel="stylesheet" href="{{asset('style.css')}}">
     <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
@@ -22,16 +22,16 @@
                 <li class="nav-item">
                     <a class="nav-link mr-2 ml-2" href="/todo_list">Todoリスト</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link mr-2 ml-2" href="/preset_list"></a>
+                {{--<li class="nav-item">
+                    <a class="nav-link mr-2 ml-2" href=""></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mr-2 ml-2" href="/user_list"></a>
-                </li>
+                    <a class="nav-link mr-2 ml-2" href=""></a>
+                </li>--}}
             </ul>
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link mr-2 ml-2" href="/logout"></a>
+                    <a class="nav-link mr-2 ml-2" href="/profile">プロフィール</a>
                 </li>
             </ul>
         </div>
