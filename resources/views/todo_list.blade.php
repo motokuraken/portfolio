@@ -21,7 +21,7 @@
             <form method="post" action="/todo_list">
             {{csrf_field()}}
                 <div class="input-group">
-                    <input type="text" name="search" class="form-control" placeholder="タイトル">
+                    <input type="text" name="search" class="form-control" placeholder="タイトル or 作成日時">
                     <span class="input-group-btn">
                         <input type="submit" value="検索" class="btn btn-primary">
                     </span>
@@ -31,7 +31,7 @@
     </div>
     <div class="row">
         <div class="col-md-12 col-ms-12 col-xs-12 text-center">
-                <hr class="my-4">
+            <hr class="my-4">
         </div>
     </div>
     <div class="row"></div>

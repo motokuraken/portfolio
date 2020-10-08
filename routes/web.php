@@ -11,11 +11,9 @@
 |
 */
 
-Route::get('/', 'TodoController@todoList');
+Route::get('/', 'ProfileController@profile');
 
-Route::get('/test', function () {
-    return view('test');
-});
+Route::get('/profile', 'ProfileController@profile');
 
 Route::get('/todo_regi', 'TodoController@todoRegi');
 
@@ -38,5 +36,3 @@ Route::post('/todo_edit_check/{id}', 'TodoController@todoEditCheck');
 Route::post('/todo_edit_done/{id}', 'TodoController@todoEditDone');
 
 Route::post('/todo_list', 'TodoController@todoSearch');
-
-Route::get('/profile', 'ProfileController@profile');
