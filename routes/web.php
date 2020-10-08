@@ -38,3 +38,5 @@ Route::post('/todo_edit_check/{id}', 'TodoController@todoEditCheck');
 Route::post('/todo_edit_done/{id}', 'TodoController@todoEditDone');
 
 Route::post('/todo_list', 'TodoController@todoSearch');
+
+Route::get('/profile', 'ProfileController@profile');

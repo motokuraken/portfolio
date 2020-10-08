@@ -28,7 +28,7 @@
             <h3>内容</h3>
         </div>
         <div class="col-md-6 col-ms-12 col-xs-12 text-center mt-3 mb-3">
-            {{$data->contents}}
+            {!! nl2br(e($data->contents)) !!}
         </div>
     </div>
     <div class="row">

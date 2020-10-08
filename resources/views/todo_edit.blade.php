@@ -3,13 +3,28 @@
 @section('contents')
 
 <script>
-function ShowLength(str, clicked_id) {
 
-    let id = clicked_id;
+window.onload = function() {
+
+    //画面読み込み時の文字カウント
+    let num = document.getElementById('num1').value
+    document.getElementById('count1').innerHTML = num.length;
+
+    let num2 = document.getElementById('num2').value
+    document.getElementById('count2').innerHTML = num2.length;
+
+    let num3 = document.getElementById('num3').value
+    document.getElementById('count3').innerHTML = num3.length;
+
+}
+
+function ShowLength(str, get_id) {
+
+    let id = get_id;
 
     let num = id.charAt(3);
 
-    document.getElementById("count" + num).innerHTML = str.length;
+    document.getElementById('count' + num).innerHTML = str.length;
 }
 </script>
 
@@ -43,8 +58,14 @@ function ShowLength(str, clicked_id) {
                     <span class="help-block text-danger">{{$errors->first('note')}}</span>
                 </div>
                 <br>
-                <input type="submit" value="編集" class="btn-primary btn-lg" style="width:100%">
+                <input type="submit" value="更新" class="btn-primary btn-lg" style="width:100%">
             </form>
+        </div>
+        <div class="col-md-12 col-ms-12 col-xs-12 text-center">
+                <hr class="my-4">
+        </div>
+        <div class="col-md-12 col-ms-12 col-xs-12 text-center mt-4 mb-4">
+            <a href="/todo_list" class="btn-primary btn-lg">Todo一覧に戻る</a>
         </div>
     </div>
 </div>

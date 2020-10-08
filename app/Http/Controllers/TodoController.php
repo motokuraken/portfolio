@@ -69,7 +69,7 @@ class TodoController extends Controller
             $request->session()->forget('search');
         }
 
-        $data = \App\Models\todo::all();
+        $data = \App\Models\todo::Paginate(3);
 
         return view('todo_list', compact('data'));
     }
@@ -155,6 +155,7 @@ class TodoController extends Controller
         $data->title = $request->input('title');
         $data->contents = $request->input('contents');
         $data->note = $request->input('note');
+        $data->timestamps = false;
         $data->save();
 
         return view('todo_edit_done');
@@ -171,7 +172,7 @@ class TodoController extends Controller
         $request->session()->put('search', $search);
 
         //検索結果取得
-        $data = \App\Models\todo::where('title', 'like', '%'.$search.'%')->get();
+        $data = \App\Models\todo::where('title', 'like', '%'.$search.'%')->orWhere('created_at', 'like', '%'.$search.'%')->Paginate(3);
 
         return view('todo_list', compact('data'));
     }

@@ -51,7 +51,12 @@
         @foreach($data as $val)
         <div class="list">
             <p><a href="/todo_info/{{$val->id}}">{{$val->title}}</a></p>
-            <span>作成日時：{{$val->created_at}}</span>
+            <span>
+            作成日時：{{$val->created_at}}
+            @if($val->created_at != $val->updated_at)
+            (更新日時：{{$val->updated_at}})
+            @endif
+            </span>
             <div>
                 <a href="/todo_edit/{{$val->id}}">更新</a>
                 ||
@@ -60,10 +65,13 @@
         </div>
         @endforeach
         @if(session('search'))
-        <div class="col-md-12 col-ms-12 col-xs-12 text-center">
+        <div class="col-md-12 col-ms-12 col-xs-12 text-center mt-3">
             <a href="/todo_list" class="btn-primary btn-lg">一覧に戻る</a>
         </div>
         @endif
+    </div>
+    <div class="d-flex justify-content-center">
+        {{$data->links()}}
     </div>
 </div>
 

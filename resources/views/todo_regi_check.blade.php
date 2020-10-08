@@ -4,14 +4,14 @@
 
 <br>
 
-<div class="text-center">
-    <h2>登録内容の確認</h2>
-<div>
-
-<br>
-
 <div class="container">
     <div class="row">
+        <div class="col-md-12 col-ms-12 col-xs-12">
+            <div class="text-center">
+                <h2>登録内容の確認</h2>
+            <div>
+            <br>
+        </div>
         <div class="col-md-12 col-ms-12 col-xs-12">
             <form method="post" action="/todo_regi_done">
             {{csrf_field()}}
@@ -23,7 +23,7 @@
                     </tr>
                     <tr>
                         <th>内容</th>
-                        <td>{{$contents}}</td>
+                        <td>{!! nl2br(e($contents)) !!}</td>
                         <input type="hidden" name="contents" value="{{$contents}}">
                     </tr>
                     <tr>

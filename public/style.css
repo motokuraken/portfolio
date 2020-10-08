@@ -1,3 +1,9 @@
+/*
+|--------------------------------------------------------------------------
+| Todoリスト(todo_list)
+|--------------------------------------------------------------------------
+*/
+
 .list {
     padding: 0.5em 1em;
     margin: 2em 0;
@@ -6,7 +12,83 @@
     border-top: solid 6px #1dc1d6;
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);/*影*/
 }
+
 .list p {
-    margin: 0; 
+    margin: 0;
     padding: 0;
+}
+
+/*
+|--------------------------------------------------------------------------
+| プロフィール(profile)
+|--------------------------------------------------------------------------
+*/
+
+.box {
+    margin-right: auto;
+    margin-left: auto;
+    background: #dcefff;
+    width: 50%;
+}
+
+.box .box-title {
+    background: #5fb3f5;
+    padding: 4px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+.box p {
+    padding: 15px 20px;
+    margin: 0;
+    font-size: 25px;
+}
+
+.box ul li {
+    font-size: 20px;
+}
+
+/*
+|--------------------------------
+| 横幅896px以下のデバイス指定
+|--------------------------------*/
+
+@media screen and (max-width: 896px) {
+
+    .box {
+        width: 80%;
+    }
+
+}
+
+/*
+|--------------------------------
+| 横幅480px以下のデバイス指定
+|--------------------------------*/
+
+@media screen and (max-width: 480px) {
+
+    .box {
+        width: 80%;
+    }
+
+    .box-title h2 {
+        font-size: 1.2em;
+    }
+
+    .box p {
+        font-size: 15px;
+    }
+
+    .box ul li {
+        font-size: 15px;
+    }
+
+    .br::before {
+        content: "\A";
+        white-space: pre;
+    }
+
 }
