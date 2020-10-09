@@ -30,12 +30,13 @@ function ShowLength(str, get_id) {
 
 <br>
 
-<div class="text-center">
-    <h2>Todo編集</h2>
-</div>
-
 <div class="container">
     <div class="row">
+        <div class="col-md-12 col-ms-12 col-xs-12">
+            <div class="text-center">
+                <h2>Todo編集</h2>
+            </div>
+        </div>
         <div class="col-md-12 col-ms-12 col-xs-12">
             <form method="post" action="{{url('/todo_edit_check', $data->id)}}">
             {{csrf_field()}}
