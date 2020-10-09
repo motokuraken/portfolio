@@ -15,12 +15,13 @@ function ShowLength(str, clicked_id) {
 
 <br>
 
-<div class="text-center">
-    <h2>Todo登録</h2>
-</div>
-
 <div class="container">
     <div class="row">
+        <div class="col-md-12 col-ms-12 col-xs-12">
+            <div class="text-center">
+                <h2>Todo登録</h2>
+            </div>
+        </div>
         <div class="col-md-12 col-ms-12 col-xs-12">
             <form method="post" action="/todo_regi_check">
             {{csrf_field()}}
