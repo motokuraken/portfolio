@@ -92,3 +92,29 @@
     }
 
 }
+
+/*
+|--------------------------------------------------------------------------
+| チャットツール(chat)
+|--------------------------------------------------------------------------
+*/
+
+.user {
+    margin-left: 40px;
+    margin-top: 70px;
+    border: solid 2px #1dc1d6;
+    width: 400px;
+    height: 230px;
+    vertical-align: middle;
+    text-align: center;
+    float: left;
+}
+
+.user p {
+    font-size: 25px;
+}
+
+.contents {
+    text-align: center;
+    margin-top: 70px;
+}
