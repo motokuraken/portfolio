@@ -11,6 +11,10 @@
 |
 */
 
+/**
+ * Todoリスト
+ */
+
 Route::get('/', 'ProfileController@profile');
 
 Route::get('/profile', 'ProfileController@profile');
@@ -36,3 +40,22 @@ Route::post('/todo_edit_check/{id}', 'TodoController@todoEditCheck');
 Route::post('/todo_edit_done/{id}', 'TodoController@todoEditDone');
 
 Route::post('/todo_list', 'TodoController@todoSearch');
+
+/**
+ * チャットツール
+ */
+
+Route::get('/chat_top', 'ChatController@chatTop');
+
+Route::get('/chat_user_regi', 'ChatController@chatUserRegi');
+
+Route::post('/chat_user_regi_check', 'ChatController@chatUserRegiCheck');
+
+Route::post('/chat_user_regi_done', 'ChatController@chatUserRegiDone');
+
+Route::get('/login', 'LoginController@loginini');
+
+Route::post('/login', 'LoginController@login');
+
+Route::get('/logout', 'LoginController@logout');
+
